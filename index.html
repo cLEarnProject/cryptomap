@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoExplorer - Beginner's Guide</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #map { width: 100%; height: 80vh; border: 1px solid #333; }
+    .category { margin: 20px; }
+  </style>
+</head>
+<body>
+  <h1>CryptoExplorer - Beginner's Guide</h1>
+  <div id="categories">
+    <div class="category">
+      <h2>Wallets</h2>
+      <ul>
+        <li><a href="#hardware-wallets" onclick="showCategory('Hardware Wallets')">Hardware Wallets</a></li>
+        <li><a href="#software-wallets" onclick="showCategory('Software Wallets')">Software Wallets</a></li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Exchanges</h2>
+      <ul>
+        <li><a href="#centralized-exchanges" onclick="showCategory('Centralized Exchanges')">Centralized Exchanges</a></li>
+        <li><a href="#decentralized-exchanges" onclick="showCategory('Decentralized Exchanges')">Decentralized Exchanges</a></li>
+      </ul>
+    </div>
+    <div class="category">
+      <h2>Cryptocurrencies</h2>
+      <ul>
+        <li><a href="#stablecoins" onclick="showCategory('Stablecoins')">Stablecoins</a></li>
+        <li><a href="#altcoins" onclick="showCategory('Altcoins')">Altcoins</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="map">
+    <p>Select a category to view details.</p>
+  </div>
+
+  <script>
+    function showCategory(name) {
+      const mapDiv = document.getElementById('map');
+      mapDiv.innerHTML = `<h3>${name}</h3><p>Details about ${name} will appear here.</p>`;
+    }
+  </script>
+</body>
+</html>
